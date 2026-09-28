@@ -31,6 +31,10 @@
   "customer.home.tickets": "Tickets",
   "customer.home.recommended": "Recommended for you",
   "customer.home.promoBanner": "The most popular merchants",
+  "customer.home.promoTag": "Book your ride",
+  "customer.home.promoCaption": "For work",
+  "customer.home.avatarAlt": "Your profile",
+  "customer.home.notificationsAlt": "Notifications",
 
   "customer.destination.title": "Choose destination",
   "customer.destination.pickupLabel": "Pickup point",
@@ -57,6 +61,7 @@
   "customer.assigned.cta": "View trip",
 
   "customer.tracking.title": "Trip in progress",
+  "customer.tracking.status": "On the way to your destination",
   "customer.tracking.fareDetails": "Fare details",
   "customer.tracking.cta": "End trip",
 

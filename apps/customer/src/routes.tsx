@@ -33,7 +33,7 @@ export interface AppRoute {
 
 /** Add a route: push { path, element } here, add the page under src/pages. */
 export const routes: AppRoute[] = [
-  { path: "/", element: <Navigate to="/onboarding" replace /> },
+  { path: "/", element: <Navigate to="/home" replace /> },
 
   // C-01..C-03: onboarding, journey 1
   { path: "/onboarding", element: <Splash /> },

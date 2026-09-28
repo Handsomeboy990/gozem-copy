@@ -5,6 +5,28 @@ import { formatXOF, walletRechargeMaxXof, walletRechargeMinXof, walletTx } from 
 import { useT } from "@gozem/i18n";
 import { BackTopBar, CustomerBottomNav } from "../lib/nav";
 
+/** Flat blue full-bleed header (consumer_ss3): back arrow, balance, "+ Recharger" pill. */
+function WalletHeader({ balanceXof }: { balanceXof: number }) {
+  const { t } = useT();
+  const navigate = useNavigate();
+  return (
+    <div className="gz-page-header gz-page-header--wallet">
+      <button type="button" className="gz-page-header__back" aria-label={t("common.back")} onClick={() => navigate("/home")}>
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+      </button>
+      <p style={{ margin: "var(--space-2) 0 0", fontSize: 12, opacity: 0.85 }}>{t("customer.wallet.title")}</p>
+      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: "var(--space-3)" }}>
+        <p style={{ margin: 0, fontSize: 26, fontWeight: 700 }}>{formatXOF(balanceXof)}</p>
+        <Button onClick={() => navigate("/wallet/recharge")} style={{ width: "auto", background: "var(--color-white)", color: "var(--color-wallet-customer)", minHeight: 36, padding: "0 var(--space-3)" }}>
+          + {t("customer.wallet.recharge")}
+        </Button>
+      </div>
+    </div>
+  );
+}
+
 const balanceXof = walletTx.reduce((sum, tx) => sum + (tx.type === "credit" ? tx.amountXof : -tx.amountXof), 0);
 
 function formatDate(iso: string, lang: string) {
@@ -17,24 +39,18 @@ export function Wallet() {
   const navigate = useNavigate();
 
   return (
-    <AppShell topBar={<BackTopBar title={t("customer.wallet.title")} to="/home" />} bottomNav={<CustomerBottomNav current="home" />}>
-      <Card style={{ textAlign: "center", background: "var(--color-primary-tint)" }}>
-        <p style={{ margin: 0, fontSize: 13, color: "var(--color-grey)" }}>{t("customer.wallet.balanceLabel")}</p>
-        <p style={{ margin: 0, fontSize: 28, fontWeight: 700 }}>{formatXOF(balanceXof)}</p>
-        <div style={{ marginTop: "var(--space-3)" }}>
-          <Button onClick={() => navigate("/wallet/recharge")}>{t("customer.wallet.recharge")}</Button>
-        </div>
-      </Card>
+    <AppShell bottomNav={<CustomerBottomNav current="home" />}>
+      <WalletHeader balanceXof={balanceXof} />
 
-      <Card>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+      <Card style={{ padding: 0 }}>
+        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", padding: "var(--space-3) var(--space-3) 0" }}>
           <p style={{ fontWeight: 600, margin: 0 }}>{t("customer.wallet.recentTitle")}</p>
           <button type="button" className="gz-button gz-button--ghost" style={{ width: "auto", minHeight: 32 }} onClick={() => navigate("/wallet/history")}>
             {t("common.seeAll")}
           </button>
         </div>
         {walletTx.length === 0 ? (
-          <p>{t("customer.wallet.emptyTitle")}</p>
+          <p style={{ padding: "0 var(--space-3) var(--space-3)" }}>{t("customer.wallet.emptyTitle")}</p>
         ) : (
           walletTx
             .slice(0, 3)
@@ -44,6 +60,12 @@ export function Wallet() {
                 title={tx.label}
                 subtitle={formatDate(tx.createdAt, lang)}
                 icon={<span aria-hidden="true">{tx.type === "credit" ? "+" : "-"}</span>}
+                trailing={
+                  <strong style={{ color: tx.type === "credit" ? "var(--color-primary)" : "var(--color-danger)" }}>
+                    {tx.type === "credit" ? "+" : "-"}
+                    {formatXOF(tx.amountXof)}
+                  </strong>
+                }
               />
             ))
         )}
