@@ -6,8 +6,14 @@ must be asked, never assumed.
 
 ## Purpose
 
-A test of end-to-end autonomous delivery by the craft-suite agents: reproduce
-the Gozem super-app (Benin) as faithfully as possible.
+The real objective is to prove that craft-suite
+(`Handsomeboy990/craft-suite`) can deliver a large project autonomously, with
+agents that switch models per task. Reproducing the Gozem super-app (Benin) as
+faithfully as possible is the test case.
+
+Only craft-suite agents and skills may be used. When craft-suite lacks an
+agent, a skill or a protocol, it is added to craft-suite itself (branch, PR,
+tests, reinstall). Each gap is logged in `docs/CRAFT_SUITE_GAPS.md`.
 
 ## Scope
 
