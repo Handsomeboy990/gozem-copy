@@ -97,7 +97,7 @@ background; this note describes the state at that time.
   3 agents in parallel.
 - `.claude/settings.local.json` (gitignored) holds the owner's temporary
   permission for agents to edit craft-suite and run its installer.
-- Test accounts for our platform only: [address removed],
-  [address removed].
+- Test accounts for our platform only: fictitious, seeded per role. No real
+  personal address in the repository.
 - Market: Benin (XOF, +229, Cotonou). FR and EN are both confirmed on Gozem's
   public site.

@@ -42,9 +42,9 @@ tests, reinstall). Each gap is logged in `docs/CRAFT_SUITE_GAPS.md`.
 - Not allowed: creating accounts on Gozem, automated sign-up, scraping the
   authenticated app, decompiling or reverse engineering the APK/IPA, bypassing
   any protection.
-- Test accounts on OUR platform: `[address removed]` and
-  `[address removed]`, seeded for each role (customer, driver, courier,
-  merchant, admin).
+- Test accounts on OUR platform: fictitious accounts seeded for each role
+  (customer, driver, courier, merchant, admin). No real personal address is
+  written in the repository.
 - Where public sources do not show a screen or rule, the specification marks
   it as an inferred requirement with its source of inference, so the owner can
   review it at the specification gate.
