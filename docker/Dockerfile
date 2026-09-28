@@ -1,9 +1,9 @@
 # syntax=docker/dockerfile:1
 FROM node:24-alpine AS build
 WORKDIR /repo
-RUN corepack enable && corepack prepare pnpm@11 --activate
+RUN npm install -g pnpm@11.17.0
 
-COPY pnpm-workspace.yaml package.json ./
+COPY pnpm-lock.yaml pnpm-workspace.yaml package.json ./
 COPY packages ./packages
 COPY apps ./apps
 
