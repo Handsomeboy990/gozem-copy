@@ -14,6 +14,7 @@ const GRID_ITEMS: { key: string; labelKey: string; href: string }[] = [
   { key: "ads", labelKey: "merchant.home.ads", href: "/ads" },
   { key: "redeem", labelKey: "merchant.home.redeem", href: "/redeem" },
   { key: "courier", labelKey: "merchant.home.courier", href: "/courier" },
+  { key: "coupon", labelKey: "merchant.home.coupon", href: "/coupon" },
   { key: "profile", labelKey: "merchant.home.profile", href: "/profile" },
 ];
 

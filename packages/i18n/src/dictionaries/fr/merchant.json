@@ -84,5 +84,6 @@
   "merchant.nav.home": "Accueil",
   "merchant.nav.orders": "Commandes",
   "merchant.nav.wallet": "Portefeuille",
-  "merchant.nav.profile": "Profil"
+  "merchant.nav.profile": "Profil",
+  "merchant.home.coupon": "Coupon"
 }
