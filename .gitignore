@@ -9,4 +9,5 @@ build/
 .next/
 coverage/
 research/raw/
-.claude/.vite/
+.claude/
+.vite/
