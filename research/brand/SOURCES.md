@@ -44,6 +44,10 @@ Gozem brand, so it was not fetched.
   `com.gozem.merchant`
   date on disk: 2026-09-28 (pre-existing)
 
+## Third-party brand assets (2026-09-28)
+
+- apps/customer/public/fedapay-logo.svg <- https://fedapay.com/_next/static/media/logo_fedapay.f31cf8ed.svg (date 2026-09-28; third-party brand shown as a payment preview)
+
 ## URLs referenced but not fetched
 
 - https://gozem.co/bj/wp-content/themes/gozem-revamp-theme/assets/plugins/css/font-awesome.css?ver=6.7.2
