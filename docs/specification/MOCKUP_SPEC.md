@@ -1,6 +1,6 @@
 # Mockup specification (owner approval gate)
 
-Status: awaiting owner approval. No clickable PWA code is built until this file is approved.
+Status: approved by the owner on 2026-09-28 at 16:27, with the answers in section 8.
 
 ## Résumé (FR)
 
@@ -294,6 +294,27 @@ not resolve these.
    Gozem app. Should that same intent extend to the installed PWA's own name and icon
    (for example "Gozem Copy (Test)" instead of "Gozem"), or is the in-app banner alone
    sufficient and the installed app should use the exact Gozem name/icon?
+
+### Owner answers (2026-09-28, 16:27)
+
+1. Unknown or discarded values use plausible invented XOF figures, each marked
+   "invented" in the mockup data and listed below.
+2. FedaPay is shown by name and logo as a preview on the payment and checkout
+   screens (C-11 and the food, shop and parcel checkouts). No real call is made.
+3. The installed PWA uses the exact "Gozem" name and icon. The permanent in-app
+   disclaimer banner stays mandatory on every screen.
+
+Invented values (fictitious, for visual realism only):
+
+| Field | Invented value |
+|---|---|
+| Wallet recharge minimum | 500 XOF |
+| Wallet recharge maximum | 500,000 XOF |
+| Referral reward per referred user | 1,000 XOF |
+| Referral cap | 10 referrals |
+| V+ financing contract total (car) | 6,500,000 XOF |
+| V+ daily deduction (car) | 12,000 XOF |
+| Sample ride fares (Zem, Tricycle, Taxi, Clim+, Eco+), Cotonou, about 5 km | 700, 900, 1,500, 2,500, 1,800 XOF |
 
 ## 9. Out of scope (explicit)
 
