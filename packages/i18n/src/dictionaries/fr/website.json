@@ -1,1 +1,65 @@
-{}
+{
+  "website.nav.ariaLabel": "Navigation du site",
+  "website.nav.home": "Accueil",
+  "website.nav.ride": "Course",
+  "website.nav.food": "Food",
+  "website.nav.shop": "Achats",
+  "website.nav.parcel": "Coursier",
+  "website.nav.partners": "Partenaires",
+  "website.nav.about": "À propos",
+  "website.nav.legal": "Mentions légales",
+
+  "website.home.heroTitle": "Gozem, votre super app tout-en-un",
+  "website.home.heroSubtitle": "Tout ce dont vous avez besoin, dans une seule app : mobilité, livraisons et achats digitaux.",
+  "website.home.servicesTitle": "Nos services",
+  "website.home.downloadTitle": "Essayer la maquette",
+  "website.home.downloadSubtitle": "Reproduction de test : ouvrez chaque app pour explorer les écrans cliquables.",
+  "website.home.entry.customer": "App client",
+  "website.home.entry.driver": "App chauffeur",
+  "website.home.entry.merchant": "App marchand",
+  "website.home.entry.admin": "Back office admin",
+  "website.home.mission": "Notre mission est de faire sourire l'Afrique.",
+
+  "website.ride.title": "Course avec un chauffeur Gozem",
+  "website.ride.subtitle": "Zem, Tricycle, Taxi, Clim+ et Eco+ : choisissez la classe adaptée à votre trajet à Cotonou.",
+  "website.ride.inventedFare": "Tarif indicatif fictif, pour la démonstration",
+
+  "website.food.title": "Vos plats préférés livrés chez vous",
+  "website.food.subtitle": "Commandez auprès de restaurants partenaires et suivez la livraison en direct.",
+
+  "website.shop.title": "Faites vos courses sans bouger de chez vous",
+  "website.shop.subtitle": "Épicerie, santé et achats du quotidien livrés à votre porte.",
+
+  "website.parcel.title": "Envoyez vos colis rapidement et en toute sécurité",
+  "website.parcel.subtitle": "Un coursier Gozem récupère et livre votre colis à Cotonou et ses environs.",
+
+  "website.partners.title": "Partenaires",
+  "website.partners.subtitle": "Gozem travaille avec des marchands, restaurants et entreprises locales pour développer ses services au Bénin.",
+
+  "website.about.title": "À propos de Gozem",
+  "website.about.mission": "Notre mission est de faire sourire l'Afrique.",
+  "website.about.presence": "Présence actuelle :",
+
+  "website.legal.title": "Mentions légales",
+  "website.legal.subtitle": "Résumé en langage simple des conditions d'utilisation et de la politique de confidentialité. Reproduction de test, ceci n'a aucune valeur contractuelle.",
+  "website.legal.termsTitle": "Conditions d'utilisation",
+  "website.legal.termsSummary": "Les conditions générales couvrent 22 clauses, résumées ici en huit thèmes.",
+  "website.legal.termsSection1": "Inscription et compte utilisateur",
+  "website.legal.termsSection2": "Utilisation des services de mobilité, livraison et achats",
+  "website.legal.termsSection3": "Tarification et paiement",
+  "website.legal.termsSection4": "Portefeuille électronique (wallet)",
+  "website.legal.termsSection5": "Obligations des chauffeurs et marchands partenaires",
+  "website.legal.termsSection6": "Responsabilité et limitation de garantie",
+  "website.legal.termsSection7": "Résiliation du compte",
+  "website.legal.termsSection8": "Droit applicable et litiges",
+  "website.legal.privacyTitle": "Politique de confidentialité",
+  "website.legal.privacySummary": "La politique de confidentialité couvre 8 sections, résumées ici en langage simple.",
+  "website.legal.privacySection1": "Données collectées",
+  "website.legal.privacySection2": "Finalité du traitement",
+  "website.legal.privacySection3": "Partage avec des partenaires",
+  "website.legal.privacySection4": "Conservation des données",
+  "website.legal.privacySection5": "Sécurité des données",
+  "website.legal.privacySection6": "Droits de la personne concernée",
+  "website.legal.privacySection7": "Cookies et traceurs",
+  "website.legal.privacySection8": "Contact du délégué à la protection des données"
+}

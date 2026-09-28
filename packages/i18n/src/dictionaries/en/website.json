@@ -1,1 +1,65 @@
-{}
+{
+  "website.nav.ariaLabel": "Site navigation",
+  "website.nav.home": "Home",
+  "website.nav.ride": "Ride",
+  "website.nav.food": "Food",
+  "website.nav.shop": "Shop",
+  "website.nav.parcel": "Parcel",
+  "website.nav.partners": "Partners",
+  "website.nav.about": "About",
+  "website.nav.legal": "Legal",
+
+  "website.home.heroTitle": "Gozem, your all-in-one super app",
+  "website.home.heroSubtitle": "Everything you need in one app: mobility, deliveries and digital shopping.",
+  "website.home.servicesTitle": "Our services",
+  "website.home.downloadTitle": "Try the mockup",
+  "website.home.downloadSubtitle": "Test reproduction: open each app to explore the clickable screens.",
+  "website.home.entry.customer": "Customer app",
+  "website.home.entry.driver": "Driver app",
+  "website.home.entry.merchant": "Merchant app",
+  "website.home.entry.admin": "Admin back office",
+  "website.home.mission": "Our mission is to make Africa smile.",
+
+  "website.ride.title": "Ride with a Gozem driver",
+  "website.ride.subtitle": "Zem, Tricycle, Taxi, Clim+ and Eco+: pick the class that fits your trip in Cotonou.",
+  "website.ride.inventedFare": "Sample fare, invented for the demo",
+
+  "website.food.title": "Your favourite meals delivered to you",
+  "website.food.subtitle": "Order from partner restaurants and track delivery live.",
+
+  "website.shop.title": "Shop without leaving home",
+  "website.shop.subtitle": "Groceries, health items and everyday shopping delivered to your door.",
+
+  "website.parcel.title": "Send your parcels quickly and safely",
+  "website.parcel.subtitle": "A Gozem courier picks up and delivers your parcel in and around Cotonou.",
+
+  "website.partners.title": "Partners",
+  "website.partners.subtitle": "Gozem works with local merchants, restaurants and businesses to grow its services in Benin.",
+
+  "website.about.title": "About Gozem",
+  "website.about.mission": "Our mission is to make Africa smile.",
+  "website.about.presence": "Current presence:",
+
+  "website.legal.title": "Legal",
+  "website.legal.subtitle": "Plain-language summary of the terms of use and privacy policy. Test reproduction, no contractual value.",
+  "website.legal.termsTitle": "Terms of use",
+  "website.legal.termsSummary": "The terms cover 22 clauses, summarised here into eight themes.",
+  "website.legal.termsSection1": "Registration and user account",
+  "website.legal.termsSection2": "Use of mobility, delivery and shopping services",
+  "website.legal.termsSection3": "Pricing and payment",
+  "website.legal.termsSection4": "Wallet (e-money balance)",
+  "website.legal.termsSection5": "Driver and merchant partner obligations",
+  "website.legal.termsSection6": "Liability and warranty limitation",
+  "website.legal.termsSection7": "Account termination",
+  "website.legal.termsSection8": "Governing law and disputes",
+  "website.legal.privacyTitle": "Privacy policy",
+  "website.legal.privacySummary": "The privacy policy covers 8 sections, summarised here in plain language.",
+  "website.legal.privacySection1": "Data collected",
+  "website.legal.privacySection2": "Purpose of processing",
+  "website.legal.privacySection3": "Sharing with partners",
+  "website.legal.privacySection4": "Data retention",
+  "website.legal.privacySection5": "Data security",
+  "website.legal.privacySection6": "Data subject rights",
+  "website.legal.privacySection7": "Cookies and trackers",
+  "website.legal.privacySection8": "Data protection contact"
+}
