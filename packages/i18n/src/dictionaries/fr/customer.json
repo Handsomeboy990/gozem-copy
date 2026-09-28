@@ -31,6 +31,10 @@
   "customer.home.tickets": "Billetterie",
   "customer.home.recommended": "Recommandé pour vous",
   "customer.home.promoBanner": "Les marchands les plus en vue",
+  "customer.home.promoTag": "Commande ta voiture",
+  "customer.home.promoCaption": "Pour le boulot",
+  "customer.home.avatarAlt": "Votre profil",
+  "customer.home.notificationsAlt": "Notifications",
 
   "customer.destination.title": "Choisir la destination",
   "customer.destination.pickupLabel": "Point de départ",
@@ -57,7 +61,8 @@
   "customer.assigned.cta": "Voir le trajet",
 
   "customer.tracking.title": "Trajet en cours",
-  "customer.tracking.fareDetails": "Détails du tarif",
+  "customer.tracking.status": "En route vers votre destination",
+  "customer.tracking.fareDetails": "Détails tarif",
   "customer.tracking.cta": "Terminer le trajet",
 
   "customer.arrived.title": "Trajet terminé",
