@@ -4,6 +4,7 @@ import { useT } from "@gozem/i18n";
 import { formatXOF, orders, type OrderStatus } from "@gozem/fake-data";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { merchantNavItems } from "./nav";
+import { formatOrderNumber } from "../lib/orderNumber";
 
 type Tab = "new" | "ongoing" | "ready" | "history";
 
@@ -51,8 +52,8 @@ export function Orders() {
         visibleOrders.map((order) => (
           <ListItem
             key={order.id}
-            title={`${t("merchant.orderDetail.number")} ${order.id}`}
-            subtitle={`${formatXOF(order.totalXof)} · ${order.status}`}
+            title={`${t("merchant.orderDetail.number")} ${formatOrderNumber(order.id)}`}
+            subtitle={`${formatXOF(order.totalXof)} · ${t(`merchant.orders.status.${order.status}`)}`}
             onClick={() => navigate(`/orders/detail?id=${order.id}`)}
           />
         ))

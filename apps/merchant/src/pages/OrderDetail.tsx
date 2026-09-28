@@ -3,6 +3,7 @@ import { AppShell, Button, Card, TopBar } from "@gozem/design-system";
 import { useT } from "@gozem/i18n";
 import { formatXOF, merchants, orders, users } from "@gozem/fake-data";
 import { useNavigate, useSearchParams } from "react-router-dom";
+import { formatOrderNumber } from "../lib/orderNumber";
 
 export function OrderDetail() {
   const { t } = useT();
@@ -19,7 +20,7 @@ export function OrderDetail() {
     <AppShell topBar={<TopBar title={t("merchant.orderDetail.title")} />}>
       <Card>
         <p>
-          {t("merchant.orderDetail.number")} {order.id}
+          {t("merchant.orderDetail.number")} {formatOrderNumber(order.id)}
         </p>
         <p>
           {t("merchant.orderDetail.prepFor")}: 12:39 · {t("merchant.orderDetail.remaining")}: 15 min
