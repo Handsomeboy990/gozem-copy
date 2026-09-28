@@ -1,0 +1,335 @@
+.gz-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--banner-height);
+  background: var(--color-text);
+  color: var(--color-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  line-height: 1.2;
+  text-align: center;
+  padding: 0 var(--space-3);
+  z-index: 1000;
+}
+
+.gz-shell {
+  padding-top: var(--banner-height);
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.gz-shell__content {
+  flex: 1;
+  width: 100%;
+  max-width: var(--max-width-desktop);
+  margin: 0 auto;
+  padding: var(--space-4);
+  padding-bottom: calc(var(--bottomnav-height) + var(--space-4));
+}
+
+.gz-topbar {
+  position: sticky;
+  top: var(--banner-height);
+  z-index: 900;
+  height: var(--topbar-height);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: 0 var(--space-4);
+  background: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  width: 100%;
+  max-width: var(--max-width-desktop);
+  margin: 0 auto;
+}
+
+.gz-topbar__title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.gz-topbar__logo {
+  height: 24px;
+  width: auto;
+  display: block;
+}
+
+.gz-lang-switch {
+  display: inline-flex;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  font-size: 12px;
+}
+
+.gz-lang-switch button {
+  border: none;
+  background: var(--color-white);
+  color: var(--color-grey);
+  padding: var(--space-1) var(--space-3);
+  cursor: pointer;
+}
+
+.gz-lang-switch button[aria-pressed="true"] {
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.gz-lang-switch button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.gz-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 44px;
+  padding: 0 var(--space-4);
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+}
+
+.gz-button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.gz-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.gz-button--primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.gz-button--secondary {
+  background: var(--color-primary-tint);
+  color: var(--color-primary);
+}
+
+.gz-button--ghost {
+  background: transparent;
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.gz-field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+  margin-bottom: var(--space-4);
+}
+
+.gz-field__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.gz-field__input {
+  min-height: 44px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: 0 var(--space-3);
+  font-size: 15px;
+  color: var(--color-text);
+  background: var(--color-white);
+}
+
+.gz-field__input:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+  border-color: var(--color-primary);
+}
+
+.gz-field__input[aria-invalid="true"] {
+  border-color: var(--color-danger);
+}
+
+.gz-field__error {
+  font-size: 12px;
+  color: var(--color-danger);
+}
+
+.gz-otp {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.gz-otp__digit {
+  width: 44px;
+  height: 52px;
+  text-align: center;
+  font-size: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.gz-otp__digit:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+.gz-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-4);
+  background: var(--color-white);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: var(--space-3);
+}
+
+.gz-list-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3) 0;
+  border-bottom: 1px solid var(--color-border);
+  text-align: left;
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+button.gz-list-item {
+  cursor: pointer;
+}
+
+.gz-list-item:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.gz-list-item__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary-tint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.gz-list-item__body {
+  flex: 1;
+  min-width: 0;
+}
+
+.gz-list-item__title {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.gz-list-item__subtitle {
+  font-size: 12px;
+  color: var(--color-grey);
+  margin: 0;
+}
+
+.gz-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: var(--space-2);
+  padding: var(--space-6) var(--space-4);
+  color: var(--color-grey);
+}
+
+.gz-empty__title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+
+.gz-bottomnav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: var(--bottomnav-height);
+  background: var(--color-white);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  z-index: 900;
+}
+
+.gz-bottomnav__inner {
+  display: flex;
+  width: 100%;
+  max-width: var(--max-width-desktop);
+  margin: 0 auto;
+}
+
+/* Direct child is whatever link/button element the host app renders (react-router
+   Link, <a>, or <button>): reset browser defaults and give it the touch target,
+   since the design system does not control that element's tag. */
+.gz-bottomnav__inner > * {
+  flex: 1;
+  display: flex;
+  min-height: 44px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.gz-bottomnav__item {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  background: none;
+  border: none;
+  color: var(--color-grey);
+  font-size: 11px;
+  cursor: pointer;
+  text-decoration: none;
+  width: 100%;
+  min-height: 44px;
+}
+
+.gz-bottomnav__item:not([data-has-icon])::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border-radius: var(--radius-full);
+  background: currentColor;
+  opacity: 0.35;
+}
+
+.gz-bottomnav__item[aria-current="page"] {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.gz-bottomnav__item[aria-current="page"]::before {
+  opacity: 1;
+}
+
+.gz-bottomnav__item:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}

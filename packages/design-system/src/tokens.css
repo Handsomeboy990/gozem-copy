@@ -1,0 +1,74 @@
+:root {
+  /* Brand colours, see research/brand/BRAND.md */
+  --color-primary: #179138;
+  --color-primary-tint: #E8F4EB;
+  --color-text: #1A1A1A;
+  --color-grey: #6C6C6C;
+
+  /* Inferred secondary colours (see BRAND.md, marked INFERRED) */
+  --color-wallet-blue: #1A5FAE;
+  --color-accent-red: #A5273A;
+  --color-near-black: #0A0A0A;
+
+  --color-bg: #FFFFFF;
+  --color-border: #E0E0E0;
+  --color-danger: #C0392B;
+  --color-success: var(--color-primary);
+  --color-white: #FFFFFF;
+
+  --font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+
+  --banner-height: 40px;
+  --topbar-height: 56px;
+  --bottomnav-height: 60px;
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.12);
+
+  --max-width-desktop: 480px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  color: var(--color-text);
+  background: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}

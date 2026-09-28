@@ -1,0 +1,18 @@
+{
+  "common.disclaimer": "Reproduction for testing purposes, not affiliated with Gozem",
+  "common.appName": "Gozem",
+  "common.loading": "Loading...",
+  "common.error": "Something went wrong",
+  "common.retry": "Retry",
+  "common.empty": "Nothing to show yet",
+  "common.next": "Next",
+  "common.back": "Back",
+  "common.cancel": "Cancel",
+  "common.confirm": "Confirm",
+  "common.close": "Close",
+  "common.seeAll": "See all",
+  "common.language": "Language",
+  "common.otpFixedNotice": "Fixed test code, no SMS sent",
+  "common.fedapayPreview": "FedaPay payment available in a future phase",
+  "common.invented": "Invented value for demo purposes"
+}

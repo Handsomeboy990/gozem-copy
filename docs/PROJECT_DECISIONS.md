@@ -6,8 +6,14 @@ must be asked, never assumed.
 
 ## Purpose
 
-A test of end-to-end autonomous delivery by the craft-suite agents: reproduce
-the Gozem super-app (Benin) as faithfully as possible.
+The real objective is to prove that craft-suite
+(`Handsomeboy990/craft-suite`) can deliver a large project autonomously, with
+agents that switch models per task. Reproducing the Gozem super-app (Benin) as
+faithfully as possible is the test case.
+
+Only craft-suite agents and skills may be used. When craft-suite lacks an
+agent, a skill or a protocol, it is added to craft-suite itself (branch, PR,
+tests, reinstall). Each gap is logged in `docs/CRAFT_SUITE_GAPS.md`.
 
 ## Scope
 
@@ -36,9 +42,9 @@ the Gozem super-app (Benin) as faithfully as possible.
 - Not allowed: creating accounts on Gozem, automated sign-up, scraping the
   authenticated app, decompiling or reverse engineering the APK/IPA, bypassing
   any protection.
-- Test accounts on OUR platform: `[address removed]` and
-  `[address removed]`, seeded for each role (customer, driver, courier,
-  merchant, admin).
+- Test accounts on OUR platform: fictitious accounts seeded for each role
+  (customer, driver, courier, merchant, admin). No real personal address is
+  written in the repository.
 - Where public sources do not show a screen or rule, the specification marks
   it as an inferred requirement with its source of inference, so the owner can
   review it at the specification gate.
