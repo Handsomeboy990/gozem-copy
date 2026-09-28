@@ -8,6 +8,54 @@ import { FedaPayPreview } from "../components/FedaPayPreview";
 
 const activeRide = rides.find((r) => r.status === "ongoing") ?? rides[0];
 const driver = users.find((u) => u.role === "driver")!;
+const REF = `${import.meta.env.BASE_URL}ref/`;
+
+/** Full-screen static styled map (CSS street grid, no tiles, no network) with a back button. */
+function RideMap({ onBack, backLabel }: { onBack: () => void; backLabel: string }) {
+  return (
+    <div className="gz-map" style={{ height: 220, margin: "calc(-1 * var(--space-4)) calc(-1 * var(--space-4)) var(--space-3)", borderRadius: 0 }} aria-hidden="true">
+      <button
+        type="button"
+        className="gz-map__control"
+        style={{ top: "var(--space-3)", left: "var(--space-3)" }}
+        aria-label={backLabel}
+        onClick={onBack}
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M15 18l-6-6 6-6" />
+        </svg>
+      </button>
+      <span className="gz-map__pin" style={{ top: "38%", left: "62%" }} />
+      <span className="gz-map__vehicle" style={{ top: "55%", left: "40%" }} />
+    </div>
+  );
+}
+
+/** Driver card + action buttons, shared by the assigned and tracking bottom sheets. */
+function DriverCard() {
+  const { t } = useT();
+  return (
+    <div className="gz-driver-row">
+      <img src={`${REF}illustration-driver-avatar-placeholder.png`} alt="" aria-hidden="true" className="gz-driver-row__avatar" />
+      <div className="gz-driver-row__body">
+        <p style={{ margin: 0, fontWeight: 700 }}>{driver.fullName}</p>
+        <p style={{ margin: "2px 0 0", fontSize: 12, color: "var(--color-grey)" }}>
+          <span style={{ color: "var(--color-primary)", fontWeight: 700 }}>4.0 ★</span> · AB 1234 RB
+        </p>
+      </div>
+      <button type="button" className="gz-round-action" aria-label={t("customer.assigned.message")}>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H8l-5 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+        </svg>
+      </button>
+      <button type="button" className="gz-round-action" aria-label={t("customer.assigned.call")}>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+        </svg>
+      </button>
+    </div>
+  );
+}
 
 function classFromParams(params: URLSearchParams): RideClassId {
   const value = params.get("class");
@@ -63,8 +111,18 @@ export function RideClassPicker() {
   const [params] = useSearchParams();
   const [selected, setSelected] = useState<RideClassId>(classFromParams(params));
 
+  const classIcon: Record<string, string> = {
+    zem: "icon-zem.png",
+    tricycle: "icon-tricycle.png",
+    taxi: "icon-voiture.png",
+    "clim-plus": "icon-voiture.png",
+    "eco-plus": "icon-voiture.png",
+  };
+
   return (
-    <AppShell topBar={<BackTopBar title={t("customer.class.title")} to="/ride/destination" />}>
+    <AppShell>
+      <RideMap onBack={() => navigate("/ride/destination")} backLabel={t("common.back")} />
+      <p style={{ fontWeight: 700, fontSize: 16, margin: "0 0 var(--space-2)" }}>{t("customer.class.title")}</p>
       <Card style={{ padding: 0 }}>
         {rideClasses.map((rideClass) => (
           <button
@@ -78,6 +136,9 @@ export function RideClassPicker() {
               padding: "var(--space-3)",
             }}
           >
+            <span className="gz-list-item__icon">
+              <img src={`${REF}${classIcon[rideClass.id]}`} alt="" aria-hidden="true" style={{ width: 24, height: 24, objectFit: "contain" }} />
+            </span>
             <span className="gz-list-item__body">
               <p className="gz-list-item__title">{rideClass.label}</p>
               <p className="gz-list-item__subtitle">
@@ -88,11 +149,11 @@ export function RideClassPicker() {
           </button>
         ))}
       </Card>
-      <div style={{ display: "flex", gap: "var(--space-3)", marginBottom: "var(--space-4)" }}>
-        <span className="gz-card" style={{ flex: 1, marginBottom: 0, fontSize: 13 }}>
+      <div style={{ display: "flex", gap: "var(--space-3)", margin: "var(--space-3) 0 var(--space-4)" }}>
+        <span className="gz-pill-link" style={{ flex: 1, justifyContent: "center" }}>
           {t("customer.class.walletLink")}
         </span>
-        <span className="gz-card" style={{ flex: 1, marginBottom: 0, fontSize: 13 }}>
+        <span className="gz-pill-link" style={{ flex: 1, justifyContent: "center" }}>
           {t("customer.class.promoLink")}
         </span>
       </div>
@@ -151,17 +212,15 @@ export function RideAssigned() {
   const vehiclePlate = "AB 1234 RB";
 
   return (
-    <AppShell topBar={<BackTopBar title={t("customer.assigned.title")} to="/ride/searching" />}>
-      <Card>
-        <p style={{ fontWeight: 700, fontSize: 17, marginTop: 0 }}>{driver.fullName}</p>
-        <p style={{ fontSize: 13, color: "var(--color-grey)" }}>
-          {t("customer.assigned.ratingLabel")}: 4.8 · {t("customer.assigned.plateLabel")}: {vehiclePlate}
+    <AppShell>
+      <RideMap onBack={() => navigate("/ride/searching")} backLabel={t("common.back")} />
+      <div className="gz-sheet" style={{ margin: "0 calc(-1 * var(--space-4))", boxShadow: "none" }}>
+        <p style={{ margin: "0 0 var(--space-3)", fontWeight: 700, fontSize: 15 }}>{t("customer.assigned.title")}</p>
+        <DriverCard />
+        <p style={{ fontSize: 12, color: "var(--color-grey)", margin: "var(--space-2) 0 0" }}>
+          {t("customer.assigned.plateLabel")}: {vehiclePlate}
         </p>
-        <div style={{ display: "flex", gap: "var(--space-3)" }}>
-          <Button variant="secondary">{t("customer.assigned.call")}</Button>
-          <Button variant="secondary">{t("customer.assigned.message")}</Button>
-        </div>
-      </Card>
+      </div>
       <Button onClick={() => navigate(`/ride/tracking?class=${classId}`)}>{t("customer.assigned.cta")}</Button>
     </AppShell>
   );
@@ -175,16 +234,16 @@ export function RideTracking() {
   const classId = classFromParams(params);
 
   return (
-    <AppShell topBar={<BackTopBar title={t("customer.tracking.title")} to="/ride/assigned" />}>
-      <Card
-        aria-hidden="true"
-        style={{ height: 180, background: "var(--color-primary-tint)", display: "flex", alignItems: "center", justifyContent: "center" }}
-      >
-        🗺️
-      </Card>
-      <Card>
-        <ListItem title={t("customer.tracking.fareDetails")} subtitle={formatXOF(activeRide.fareXof)} />
-      </Card>
+    <AppShell>
+      <RideMap onBack={() => navigate("/ride/assigned")} backLabel={t("common.back")} />
+      <div className="gz-sheet" style={{ margin: "0 calc(-1 * var(--space-4))", boxShadow: "none" }}>
+        <p style={{ margin: "0 0 var(--space-3)", fontWeight: 700, fontSize: 15 }}>{t("customer.tracking.status")}</p>
+        <DriverCard />
+        <div style={{ display: "flex", gap: "var(--space-2)", marginTop: "var(--space-3)" }}>
+          <span className="gz-pill-link">{t("customer.class.walletLink")}</span>
+          <span className="gz-pill-link">{t("customer.tracking.fareDetails")}: {formatXOF(activeRide.fareXof)}</span>
+        </div>
+      </div>
       <Button onClick={() => navigate(`/ride/arrived?class=${classId}`)}>{t("customer.tracking.cta")}</Button>
     </AppShell>
   );
