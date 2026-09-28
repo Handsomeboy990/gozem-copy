@@ -55,3 +55,35 @@ Gozem brand, so it was not fetched.
   `homepage_bj.html` line 88, name only used in BRAND.md, file itself not
   fetched: out of scope for this pass, which targeted the theme's own
   colour/font CSS)
+
+## Crops for visual-reference asset placeholders (2026-09-28)
+
+Each crop below is a small excerpt of an already-downloaded public store
+screenshot, cropped to isolate one UI glyph or photo per
+`docs/specification/VISUAL_REFERENCE.md`. Cropped from a public store
+screenshot under the authorized reproduction exception
+(`docs/PROJECT_DECISIONS.md`, rows Identity, Hosting, Repository,
+Disclaimer).
+
+- apps/customer/public/ref/icon-zem.png <- research/raw/commerce/consumer_ss1.png <- Google Play Store listing screenshots for `com.gozem`, date 2026-09-28, cropped from a public store screenshot under the authorized reproduction exception
+- apps/customer/public/ref/icon-tricycle.png <- research/raw/commerce/consumer_ss1.png <- Google Play Store listing screenshots for `com.gozem`, date 2026-09-28, cropped from a public store screenshot under the authorized reproduction exception
+- apps/customer/public/ref/icon-voiture.png <- research/raw/commerce/consumer_ss1.png <- Google Play Store listing screenshots for `com.gozem`, date 2026-09-28, cropped from a public store screenshot under the authorized reproduction exception
+- apps/customer/public/ref/icon-coursier.png <- research/raw/commerce/consumer_ss1.png <- Google Play Store listing screenshots for `com.gozem`, date 2026-09-28, cropped from a public store screenshot under the authorized reproduction exception
+- apps/customer/public/ref/icon-credit.png <- research/raw/commerce/consumer_ss1.png <- Google Play Store listing screenshots for `com.gozem`, date 2026-09-28, cropped from a public store screenshot under the authorized reproduction exception
+- apps/customer/public/ref/icon-food.png <- research/raw/commerce/consumer_ss1.png <- Google Play Store listing screenshots for `com.gozem`, date 2026-09-28, cropped from a public store screenshot under the authorized reproduction exception
+- apps/customer/public/ref/icon-shopping.png <- research/raw/commerce/consumer_ss1.png <- Google Play Store listing screenshots for `com.gozem`, date 2026-09-28, cropped from a public store screenshot under the authorized reproduction exception
+- apps/customer/public/ref/icon-billetterie.png <- research/raw/commerce/consumer_ss1.png <- Google Play Store listing screenshots for `com.gozem`, date 2026-09-28, cropped from a public store screenshot under the authorized reproduction exception
+- apps/customer/public/ref/logo-gozem-topbar.png <- research/raw/commerce/consumer_ss1.png <- Google Play Store listing screenshots for `com.gozem`, date 2026-09-28, cropped from a public store screenshot under the authorized reproduction exception
+- apps/customer/public/ref/avatar-placeholder.png <- research/raw/commerce/consumer_ss1.png <- Google Play Store listing screenshots for `com.gozem`, date 2026-09-28, cropped from a public store screenshot under the authorized reproduction exception
+- apps/customer/public/ref/banner-home-promo.png <- research/raw/commerce/consumer_ss1.png <- Google Play Store listing screenshots for `com.gozem`, date 2026-09-28, cropped from a public store screenshot under the authorized reproduction exception
+- apps/customer/public/ref/illustration-driver-avatar-placeholder.png <- research/raw/commerce/consumer_ss2.png <- Google Play Store listing screenshots for `com.gozem`, date 2026-09-28, cropped from a public store screenshot under the authorized reproduction exception
+- apps/customer/public/ref/illustration-onboarding-photo.png <- research/raw/commerce/consumer_ss7.png <- Google Play Store listing screenshots for `com.gozem`, date 2026-09-28, cropped from a public store screenshot under the authorized reproduction exception
+- apps/merchant/public/ref/icon-my-store.png <- research/raw/commerce/merchant_ss2.png <- Google Play Store listing screenshots for `com.gozem.merchant`, date 2026-09-28, cropped from a public store screenshot under the authorized reproduction exception
+- apps/merchant/public/ref/icon-commande.png <- research/raw/commerce/merchant_ss2.png <- Google Play Store listing screenshots for `com.gozem.merchant`, date 2026-09-28, cropped from a public store screenshot under the authorized reproduction exception
+- apps/merchant/public/ref/icon-scan-to-pay.png <- research/raw/commerce/merchant_ss2.png <- Google Play Store listing screenshots for `com.gozem.merchant`, date 2026-09-28, cropped from a public store screenshot under the authorized reproduction exception
+- apps/merchant/public/ref/icon-dispatcher.png <- research/raw/commerce/merchant_ss2.png <- Google Play Store listing screenshots for `com.gozem.merchant`, date 2026-09-28, cropped from a public store screenshot under the authorized reproduction exception
+- apps/merchant/public/ref/icon-publicite.png <- research/raw/commerce/merchant_ss2.png <- Google Play Store listing screenshots for `com.gozem.merchant`, date 2026-09-28, cropped from a public store screenshot under the authorized reproduction exception
+- apps/merchant/public/ref/icon-redeem.png <- research/raw/commerce/merchant_ss2.png <- Google Play Store listing screenshots for `com.gozem.merchant`, date 2026-09-28, cropped from a public store screenshot under the authorized reproduction exception
+- apps/merchant/public/ref/icon-coursier.png <- research/raw/commerce/merchant_ss2.png <- Google Play Store listing screenshots for `com.gozem.merchant`, date 2026-09-28, cropped from a public store screenshot under the authorized reproduction exception
+- apps/merchant/public/ref/icon-profil.png <- research/raw/commerce/merchant_ss2.png <- Google Play Store listing screenshots for `com.gozem.merchant`, date 2026-09-28, cropped from a public store screenshot under the authorized reproduction exception
+- apps/merchant/public/ref/logo-gozem-topbar.png <- research/raw/commerce/merchant_ss2.png <- Google Play Store listing screenshots for `com.gozem.merchant`, date 2026-09-28, cropped from a public store screenshot under the authorized reproduction exception
