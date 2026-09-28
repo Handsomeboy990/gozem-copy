@@ -7,6 +7,6 @@
   },
   "scripts": {
     "build": "pnpm --filter=./apps/* run build",
-    "dev": "pnpm --filter=./apps/* run dev --parallel"
+    "dev": "pnpm --parallel --filter=./apps/* run dev"
   }
 }
