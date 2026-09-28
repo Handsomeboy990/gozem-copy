@@ -17,6 +17,7 @@ the pull request when one exists.
 | G6 | No token budget or usage-limit management for long autonomous deliveries | No | Deferred by the owner until after the mockup; its rules are applied by hand in `docs/specification/AGENT_LOG.md` | none |
 | G7 | An agent installed mid-session is not spawnable until the session restarts | Yes, for `researcher` in this session | Observed, not fixable in craft-suite; documented. Fallback used: `design-research` | none |
 | G8 | `install.sh --configure` cannot set `model_routing`; `CHANGELOG.md` lags `CONTINUITY.md` with no check | No | New, found during G2; not fixed | none |
+| G9 | Subagents can commit with a tool `Co-Authored-By` trailer even when the brief forbids it; craft-suite's guard (`.githooks`) protects only its own repository, not the projects it delivers | Yes, blocks merging gozem-copy PR #1 | New. Found in 3dd2428 and 7a6fbe7 on `feat/mockup`. Proposed: `git-workflow` installs a `commit-msg` hook into every project it commits to, and `pr-author` or `pr-reviewer` fails on any trailer. The fix of the two commits (rewrite and force push) waits for the owner's confirmation | none |
 
 Installed version: `bash install.sh --all` was run on 2026-09-28 with the
 unmerged branch `feat/researcher-agent-and-routing` checked out (167 skills,
