@@ -1,0 +1,12 @@
+{
+  "name": "gozem-copy",
+  "private": true,
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "pnpm --filter=./apps/* run build",
+    "dev": "pnpm --filter=./apps/* run dev --parallel"
+  }
+}
