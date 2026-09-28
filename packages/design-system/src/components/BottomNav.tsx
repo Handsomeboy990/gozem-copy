@@ -21,7 +21,12 @@ export function BottomNav({ items, renderLink }: BottomNavProps) {
         {items.map((item) =>
           renderLink(
             item,
-            <span key={item.key} className="gz-bottomnav__item" aria-current={item.current ? "page" : undefined}>
+            <span
+              key={item.key}
+              className="gz-bottomnav__item"
+              aria-current={item.current ? "page" : undefined}
+              data-has-icon={item.icon ? "true" : undefined}
+            >
               {item.icon}
               {item.label}
             </span>
