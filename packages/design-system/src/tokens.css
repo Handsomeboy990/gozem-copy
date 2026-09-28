@@ -5,9 +5,17 @@
   --color-text: #1A1A1A;
   --color-grey: #6C6C6C;
 
-  /* Inferred secondary colours (see BRAND.md, marked INFERRED) */
-  --color-wallet-blue: #1A5FAE;
-  --color-accent-red: #A5273A;
+  /* Measured from public store screenshots, see docs/specification/VISUAL_REFERENCE.md */
+  --color-wallet-blue: #0A67B1;
+  --color-wallet-customer: #0A67B1;
+  --color-wallet-merchant: #176096;
+  --color-surface-wallet-strip: #E2F1FF;
+  --color-surface-tile: #F3F5F4;
+  --color-accent-red: #9D222D;
+  --color-accent-red-light: #C5313B;
+  --color-accent-yellow: #FFDA23;
+  --color-icon-blue: #2A51AB;
+  --color-icon-orange: #D76633;
   --color-near-black: #0A0A0A;
 
   --color-bg: #FFFFFF;
@@ -28,6 +36,7 @@
   --radius-sm: 6px;
   --radius-md: 10px;
   --radius-lg: 16px;
+  --radius-xl: 20px;
   --radius-full: 999px;
 
   --banner-height: 40px;

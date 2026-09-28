@@ -1,7 +1,8 @@
 import type { ReactNode } from "react";
 
 export interface TopBarProps {
-  title: string;
+  /** Plain string on every sub-screen (back-arrow + title pattern); a logo/wordmark node on the home top bar. */
+  title: ReactNode;
   leading?: ReactNode;
   trailing?: ReactNode;
 }
