@@ -9,11 +9,22 @@ the pull request when one exists.
 
 | Id | Gap | Blocking | State | PR |
 |---|---|---|---|---|
-| G1 | No research agent; no craft agent has WebSearch or WebFetch | Yes, research phase | Fix prepared, not applied: the runtime permission system denied the change | none |
-| G2 | `model-routing` cannot escalate on a weak result, and an empty `model_routing` config silently disables switching | No, worked around by explicit `model` on every dispatch | Not applied, same permission category as G1 | none |
-| G3 | `design-research` forbids exact colours, logos and brands, which contradicts an owner-authorized faithful reproduction | Yes, for brand research through that agent | Needs an owner decision, not a unilateral edit | none |
-| G4 | The `source-verification` skill has no agent that owns it | No, would be covered by G1 | Folded into G1 | none |
-| G5 | A single code owner cannot satisfy "Require review from Code Owners" on their own PR | No | Merge would need `gh pr merge --admin`; not reached | none |
+| G1 | No research agent; no craft agent has WebSearch or WebFetch | Yes, research phase | Fixed on branch, commit `a5ca2a1`; installed; not spawnable until the session restarts (G7) | https://github.com/Handsomeboy990/craft-suite/pull/53 |
+| G2 | `model-routing` cannot escalate on a weak result, and an empty `model_routing` config silently disables switching | No, worked around by explicit `model` on every dispatch | Fixed on branch, commit `190daa6`; installed | https://github.com/Handsomeboy990/craft-suite/pull/53 |
+| G3 | `design-research` forbids exact colours, logos and brands, which contradicts an owner-authorized faithful reproduction | Yes, for brand research through that agent | Fixed on branch, commit `59ed0ac`, per the owner decision (scoped exception); installed | https://github.com/Handsomeboy990/craft-suite/pull/53 |
+| G4 | The `source-verification` skill has no agent that owns it | No, would be covered by G1 | Fixed with G1: `researcher` owns it | https://github.com/Handsomeboy990/craft-suite/pull/53 |
+| G5 | A single code owner cannot satisfy "Require review from Code Owners" on their own PR | No | Handled by the merge rule: agents open PRs and a craft `pr-reviewer` posts findings; the owner merges. No agent merges, no `--admin` | n/a |
+| G6 | No token budget or usage-limit management for long autonomous deliveries | No | Deferred by the owner until after the mockup; its rules are applied by hand in `docs/specification/AGENT_LOG.md` | none |
+| G7 | An agent installed mid-session is not spawnable until the session restarts | Yes, for `researcher` in this session | Observed, not fixable in craft-suite; documented. Fallback used: `design-research` | none |
+| G8 | `install.sh --configure` cannot set `model_routing`; `CHANGELOG.md` lags `CONTINUITY.md` with no check | No | New, found during G2; not fixed | none |
+
+Installed version: `bash install.sh --all` was run on 2026-09-28 with the
+unmerged branch `feat/researcher-agent-and-routing` checked out (167 skills,
+27 agents). Until the owner merges the PR into `dev`, the installed suite is
+ahead of `dev`.
+
+The craft-suite PR review by `pr-reviewer` was deferred by the owner until
+after the mockup ships.
 
 ## G1. No research agent
 
